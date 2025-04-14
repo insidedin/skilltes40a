@@ -17,13 +17,13 @@ Route::get('/admin', [AdminController::class, 'admin'])->name('admin.admin');
 Route::get('/tambahadmin', [AdminController::class, 'create'])->name('admin.create');
 Route::post('/admin', [AdminController::class, 'store'])->name('admin.store');
 
-
-
-
-
-
 //route untuk suplier
-Route::get('/suplier', [SuplierController::class, 'suplier'])->name('suplier');
+Route::get('/suplier', [SuplierController::class, 'suplier'])->name('suplier.suplier');
+Route::get('/tambahsuplier', [SuplierController::class, 'create'])->name('suplier.create');
+Route::post('/suplier', [SuplierController::class, 'store'])->name('suplier.store');
 
 //route untuk pelanggan
-Route::get('/pelanggan', [PelangganController::class, 'pelanggan'])->name('pelanggan');
+Route::get('/pelanggan', [PelangganController::class, 'pelanggan'])->name('pelanggan.pelanggan');
+Route::get('/tambahpelanggan', [PelangganController::class, 'create'])->name('pelanggan.create');
+Route::post('/pelanggan', [PelangganController::class, 'store'])->name('pelanggan.store');
+
